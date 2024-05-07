@@ -11,10 +11,10 @@ int main() {
     int image_height = (int) image_width / aspect_ratio;
     image_height = (image_height < 1) ? 1 : image_height;
 
-    vec3 myvec = { 4.0, 0.0, 3.0 };
+    double viewport_height = 2.0;
+    double viewport_width = viewport_height * (double)(image_width / image_height);
 
     // Render
-
     printf("P3\n%d %d\n255\n", image_width, image_height);
 
     for (int j = 0; j < image_height; j++) {
